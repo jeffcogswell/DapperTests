@@ -1,0 +1,16 @@
+﻿@model List<Categories>
+
+@{ 
+    int number = 3;
+}
+
+Example Link generated dynamically:<br />
+<a href="/Home/Category?catid=@number">Test Link</a><br />
+
+<br />
+
+Here's the list:<br />
+@foreach (Categories cat in Model)
+{
+    <a href="/Home/Category?catid=@cat.CategoryID">@cat.CategoryName</a><br />
+}
